@@ -1,13 +1,18 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Square
+public class Square implements ActionListener
 {
     private ImageIcon ic[] = new ImageIcon[6];
     private JButton sq = new JButton();
 
-    int loc;
-    int check;
+    private int loc;
+    private int check;
+
+    private int sw;
+
+    private boolean highlight;
 
     Square(int a, int b)
     {
@@ -20,13 +25,12 @@ public class Square
         ic [5] = new ImageIcon("RedFrog2.png");
 
         check = b;
-
         sq = new JButton(ic[b]);
-
         sq.setIcon(ic[b]);
-
         loc = a;
+        sq.addActionListener(this);
 
+        highlight = false;
     }
 
     public JButton getButton()
@@ -52,4 +56,49 @@ public class Square
     {
         return check;
     }
+
+    public void changeLocation(int n)
+    {
+        if(n < 6)
+        {
+            loc = n;
+        }
+    }
+
+    public void moveTo(Square q)
+    {
+        if(check == 2 || check == 3 && q.checkState() == 1)
+        {
+            sw = check;
+            changeLable(q.checkState());
+            q.changeLable(sw);
+
+            sw = loc;
+            loc = q.giveLocation();
+            q.changeLocation(sw);
+
+            sw = 0;
+        }
+    }
+
+    public boolean isHigh()
+    {
+        return highlight;
+    }
+
+    public void actionPerformed(ActionEvent e)
+    {
+        if(check == 2)
+            {
+                changeLable(4);
+                highlight = true;
+            }
+
+            if(check == 3)
+            {
+                changeLable(5);
+                highlight = true;
+            }
+    }
+
 }

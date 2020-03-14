@@ -8,7 +8,9 @@ public class Driver
 
         Board a = new Board();
 
-        a.vyksta();
+        a.levelSetting();
+
+        // a.checkTheStuff();
 
     }
 }
