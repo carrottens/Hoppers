@@ -11,6 +11,7 @@ public class Levels
 {
     private int l[] = new int[25];
     int level;
+    int greenFrogs;
 
     //Constructor provides a 'clean board' - board without frogs
     Levels()
@@ -28,6 +29,8 @@ public class Levels
             
             level = 0;
         }
+
+        greenFrogs = 0;
     }
 
     //changes images of buttons
@@ -48,18 +51,21 @@ public class Levels
         {
             l[0] = 3;
             l[6] = 2;
+            greenFrogs = 1;
         }
 
         if(n == 2)
         {
             l[4] = 3;
             l[14] = 2;
+            greenFrogs = 1;
         }
 
         if(n == 3)
         {
             l[8] = 2;
             l[12] = 3;
+            greenFrogs = 1;
         }
 
         if(n == 4)
@@ -67,6 +73,7 @@ public class Levels
             l[0] = 3;
             l[6] = 2;
             l[18] = 2;
+            greenFrogs = 2;
         }
 
         if(n == 5)
@@ -74,6 +81,7 @@ public class Levels
             l[2] = 2;
             l[10] = 2;
             l[20] = 3;
+            greenFrogs = 2;
         }
 
         if(n == 6)
@@ -82,15 +90,17 @@ public class Levels
             l[14] = 3;
             l[16] = 2;
             l[18] = 2;
+            greenFrogs = 3;
         }
 
         if(n == 7)
         {
             l[2] = 2;
-            l[4] =3;
+            l[4] = 3;
             l[10] = 2;
             l[14] = 2;
             l[22] = 2;
+            greenFrogs = 4;
         }
 
         if(n == 8)
@@ -100,6 +110,7 @@ public class Levels
             l[8] = 2;
             l[16] = 2;
             l[18] = 2;
+            greenFrogs = 4;
         }
 
         if(n == 9)
@@ -110,6 +121,7 @@ public class Levels
             l[12] = 3;
             l[14] = 2;
             l[18] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 10)
@@ -120,6 +132,7 @@ public class Levels
             l[16] = 2;
             l[18] = 2;
             l[24] = 3;
+            greenFrogs = 5;
         }
 
         if(n == 11)
@@ -127,6 +140,7 @@ public class Levels
             l[0] = 3;
             l[12] = 2;
             l[18] = 2;
+            greenFrogs = 2;
         }
 
         if(n == 12)
@@ -134,6 +148,7 @@ public class Levels
             l[12] = 2;
             l[14] = 2;
             l[20] = 3;
+            greenFrogs = 2;
         }
 
         if(n == 13)
@@ -142,6 +157,7 @@ public class Levels
             l[6] = 2;
             l[16] = 2;
             l[22] = 2;
+            greenFrogs = 3;
         }
 
         if(n == 14)
@@ -152,6 +168,7 @@ public class Levels
             l[16] = 2;
             l[22] = 3;
             l[24] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 15)
@@ -161,6 +178,7 @@ public class Levels
             l[14] = 2;
             l[16] = 3;
             l[18] = 2;
+            greenFrogs = 4;
         }
 
         if(n == 16)
@@ -168,6 +186,7 @@ public class Levels
             l[4] = 3;
             l[8] = 2;
             l[14] = 2;
+            greenFrogs = 2;
         }
 
         if(n == 17)
@@ -177,6 +196,7 @@ public class Levels
             l[16] = 2;
             l[18] = 2;
             l[22] = 2;
+            greenFrogs = 4;
         }
 
         if(n == 18)
@@ -188,6 +208,7 @@ public class Levels
             l[16] = 2;
             l[18] = 2;
             l[22] = 3;
+            greenFrogs = 6;
         }
 
         if(n == 19)
@@ -199,6 +220,7 @@ public class Levels
             l[16] = 2;
             l[18] = 2;
             l[22] = 2;
+            greenFrogs = 6;
 
         }
 
@@ -211,6 +233,7 @@ public class Levels
             l[14] = 2;
             l[16] = 3;
             l[18] = 2;
+            greenFrogs = 6;
         }
 
         if(n == 21)
@@ -221,6 +244,7 @@ public class Levels
             l[12] = 2;
             l[18] = 2;
             l[24] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 22)
@@ -231,6 +255,7 @@ public class Levels
             l[20] = 2;
             l[22] = 3;
             l[24] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 23)
@@ -242,6 +267,7 @@ public class Levels
             l[16] = 2;
             l[20] = 2;
             l[24] = 3;
+            greenFrogs = 6;
         }
 
         if(n == 24)
@@ -253,6 +279,7 @@ public class Levels
             l[12] = 2;
             l[16] = 2;
             l[24] = 3;
+            greenFrogs = 6;
         }
 
         if(n == 25)
@@ -263,6 +290,7 @@ public class Levels
             l[16] = 2;
             l[20] = 2;
             l[24] = 3; 
+            greenFrogs = 5;
         }
 
         if(n == 26)
@@ -273,6 +301,7 @@ public class Levels
             l[10] = 2;
             l[12] = 2;
             l[18] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 27)
@@ -282,6 +311,7 @@ public class Levels
             l[16] = 2;
             l[20] = 2;
             l[22] = 2;
+            greenFrogs = 4;
         }
 
         if(n == 28)
@@ -293,6 +323,7 @@ public class Levels
             l[14] = 2;
             l[20] = 2;
             l[24] = 2;
+            greenFrogs = 6;
         }
 
         if(n == 29)
@@ -303,6 +334,7 @@ public class Levels
             l[18] = 2;
             l[20] = 2;
             l[24] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 30)
@@ -314,6 +346,7 @@ public class Levels
             l[10] = 2;
             l[16] = 2;
             l[24] = 3;
+            greenFrogs = 6;
         }
 
         if(n == 31)
@@ -323,6 +356,7 @@ public class Levels
             l[6] = 2;
             l[12] = 2;
             l[18] = 2;
+            greenFrogs = 4;
         }
 
         if(n == 32)
@@ -334,6 +368,7 @@ public class Levels
             l[18] = 2;
             l[20] = 3;
             l[22] = 2;
+            greenFrogs = 6;
         }
 
         if(n == 33)
@@ -344,6 +379,7 @@ public class Levels
             l[16] = 2;
             l[18] = 2;
             l[22] = 2;
+            greenFrogs = 5;
         }
 
         if(n == 34)
@@ -354,6 +390,7 @@ public class Levels
             l[20] = 2;
             l[22] = 2;
             l[24] = 3;
+            greenFrogs = 5;
         }
 
         if(n == 35)
@@ -365,6 +402,7 @@ public class Levels
             l[16] = 2;
             l[18] = 2;
             l[24] = 3;
+            greenFrogs = 6;
         }
 
         if(n == 36)
@@ -376,6 +414,7 @@ public class Levels
             l[18] = 2;
             l[20] = 2;
             l[24] = 3;
+            greenFrogs = 6;
         }
 
         if(n == 37)
@@ -386,6 +425,7 @@ public class Levels
             l[18] = 2;
             l[20] = 3;
             l[22] = 2;
+            greenFrogs = 6;
         }
 
         if(n == 38)
@@ -396,6 +436,7 @@ public class Levels
             l[16] = 2;
             l[22] = 2;
             l[24] = 3;
+            greenFrogs = 5;
         }
 
         if(n == 39)
@@ -407,6 +448,7 @@ public class Levels
             l[12] = 2;
             l[16] = 2;
             l[22] = 2;
+            greenFrogs = 6;
         }
 
         if(n == 40)
@@ -418,9 +460,20 @@ public class Levels
             l[18] = 2;
             l[20] = 3;
             l[22] = 2;
+            greenFrogs = 6;
         }
 
         createLevel(a);
+    }
+
+    public int numberOfFrogs()
+    {
+        return greenFrogs;
+    }
+
+    public void decreaseInFrogs()
+    {
+        greenFrogs--;
     }
 
 }

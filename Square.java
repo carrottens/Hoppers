@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class Square implements ActionListener
+public class Square //implements ActionListener
 {
     private ImageIcon ic[] = new ImageIcon[6];
     private JButton sq = new JButton();
@@ -28,7 +28,7 @@ public class Square implements ActionListener
         sq = new JButton(ic[b]);
         sq.setIcon(ic[b]);
         loc = a;
-        sq.addActionListener(this);
+        //sq.addActionListener(this);
 
         highlight = false;
     }
@@ -59,7 +59,7 @@ public class Square implements ActionListener
 
     public void changeLocation(int n)
     {
-        if(n < 6)
+        if(n < 25)
         {
             loc = n;
         }
@@ -67,8 +67,6 @@ public class Square implements ActionListener
 
     public void moveTo(Square q)
     {
-        if(check == 2 || check == 3 && q.checkState() == 1)
-        {
             sw = check;
             changeLable(q.checkState());
             q.changeLable(sw);
@@ -78,27 +76,16 @@ public class Square implements ActionListener
             q.changeLocation(sw);
 
             sw = 0;
-        }
     }
 
-    public boolean isHigh()
-    {
-        return highlight;
-    }
+    // public boolean isHigh()
+    // {
+    //     return highlight;
+    // }
 
-    public void actionPerformed(ActionEvent e)
-    {
-        if(check == 2)
-            {
-                changeLable(4);
-                highlight = true;
-            }
+    // public void actionPerformed(ActionEvent e)
+    // {
 
-            if(check == 3)
-            {
-                changeLable(5);
-                highlight = true;
-            }
-    }
+    // }
 
 }
