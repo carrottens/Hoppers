@@ -1,21 +1,34 @@
-/*
-        It's a class which works with level setting
-        There are 40 level settings provided
-        Constructor provides a 'clean board' - board without frogs
-*/
+/**
+ * This class works with level settings
+ * There are 40 level settings provided, which are initialised depending on 
+ * the level choice in method levelChoice
+ * 
+ */
 
 import javax.swing.*;
 import java.awt.*;
 
 public class Levels
 {
+    /**
+     * l is an array its values record the numbers representing images 
+     * and index represents the location of the Square on the board
+     * @see Square class documentation for the corelation between images and numbers
+     */
     private int l[] = new int[25];
-    int level;
+
+    //the number of green frogs depending on the level
     int greenFrogs;
 
-    //Constructor provides a 'clean board' - board without frogs
+    /**
+     * Constructor provides a setting for a 'clean board' 
+     * sometimes also referred as the level 0
+     * (board without any frogs)
+     * 
+     */
     Levels()
     {
+        //Tiles switch between lily pads and water
         for (int i  = 0; i < 25; i++)
         {
             if(i%2 == 0)
@@ -27,13 +40,17 @@ public class Levels
                 l[i] = 0;
             }
             
-            level = 0;
         }
 
         greenFrogs = 0;
     }
 
-    //changes images of buttons
+    /**
+    * It is a method which changes the icons of an array of Squares
+    * depending on the records made in the array
+    * @param a is an array of Squares used on the board
+    *
+    */
     private void createLevel(Square a[])
     {
         for (int i  = 0; i < 25; i++)
@@ -42,9 +59,35 @@ public class Levels
         }
     }
 
-    //takes a level choice (n) from 1 to 40 and a set of squares (a)
-    //this method sets the level environment - 
-    //changes the lables of buttons accordingly to the level standard
+    /**
+     * It is a method which resets the board to an empty one
+     * @param an array of Squares which are displayed on the board
+     * 
+     */
+    public void wipeBoard(Square a[])
+    {
+        for (int i  = 0; i < 25; i++)
+        {
+            if(i%2 == 0)
+            {
+                l[i] = 1;
+            }
+        }
+        
+        createLevel(a);
+    }
+
+    /**
+     * This method takes a level choice and sets the level environment
+     * by applying suitable lables to an array of Squares
+     * It also sets the number of green frogs in each of them
+     * @ param n an int from 1 to 40 which represents the level
+     * @ param a is an array of Squares placed on the board 
+     * It uses the same corelation between images and number like the Square class
+     * @see Square class documentation for the corelation between images and numbers
+     * @see the beginning of this documentation for details on usage of an array l
+     * 
+     */
     public void levelChoice(int n, Square a[])
     {
         if (n == 1)
@@ -466,11 +509,21 @@ public class Levels
         createLevel(a);
     }
 
+    /**
+     * This is an accessor to the number of frogs in the current level
+     * @return greenFrogs - the current number of green frogs in current level
+     * 
+     */
     public int numberOfFrogs()
     {
         return greenFrogs;
     }
 
+    /**
+     * This is a mutator which decreases the recorded number of 
+     * frogs in the current level
+     * 
+     */
     public void decreaseInFrogs()
     {
         greenFrogs--;

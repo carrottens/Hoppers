@@ -1,3 +1,5 @@
+//This class is only responsible for running the game
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -7,10 +9,6 @@ public class Driver
     {
 
         Board a = new Board();
-
-        a.levelSetting();
-
-        // a.checkTheStuff();
 
     }
 }
