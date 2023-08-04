@@ -42,13 +42,13 @@ public class Square
      */
     Square(int location, int piece)
     {
-        ic [0] = new ImageIcon("Water.png");
-        ic [1] = new ImageIcon("LilyPad.png");
-        ic [2] = new ImageIcon("GreenFrog.png");
-        ic [3] = new ImageIcon("RedFrog.png");
+        ic [0] = new ImageIcon("Resources/Water.png");
+        ic [1] = new ImageIcon("Resources/LilyPad.png");
+        ic [2] = new ImageIcon("Resources/GreenFrog.png");
+        ic [3] = new ImageIcon("Resources/RedFrog.png");
 
-        ic [4] = new ImageIcon("GreenFrog2.png");
-        ic [5] = new ImageIcon("RedFrog2.png");
+        ic [4] = new ImageIcon("Resources/GreenFrog2.png");
+        ic [5] = new ImageIcon("Resources/RedFrog2.png");
 
         check = piece;
         loc = location;
@@ -138,5 +138,4 @@ public class Square
         loc = q.giveLocation();
         q.changeLocation(sw);
     }
-
 }
